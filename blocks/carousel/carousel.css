@@ -1,0 +1,137 @@
+.carousel {
+    --carousel-font-size-title: var(--heading-font-size-xxl);
+    --carousel-font-size-description: 13px;
+
+    overflow-y: hidden;
+    position: relative;
+    background-color: #202020;
+}
+
+.carousel .slides {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel .slide {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.carousel .slide a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .nav {
+    list-style: none;
+    margin: unset;
+}
+
+.carousel .nav li {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel .nav a {
+    display: block;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.carousel .nav .nav-prev {
+    position: absolute;
+    left: 30px;
+    top: 25%;
+    background: url("/icons/banner-arrow-left.png");
+}
+
+.carousel .nav .nav-next {
+    position: absolute;
+    right: 30px;
+    top: 25%;
+    background: url("/icons/banner-arrow-right.png");
+}
+
+.carousel .slide .banner-text-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: var(--static-color-white);
+    background-color: rgb(0 0 0 / 70%);
+    padding: 10px;
+}
+
+.carousel .slide .banner-text-container .title {
+    font-size: var(--carousel-font-size-title);
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.carousel .slide .banner-text-container .subtitle {
+    font-size: var(--carousel-font-size-description);
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.carousel .slide .banner-img-container {
+    height: 100%;
+}
+
+.carousel .slide .banner-img-container img {
+    width: 100%;
+}
+
+@media (width >= 768px) {
+    .carousel {
+        --carousel-font-size-title: 27px;
+        --carousel-font-size-description: var(--heading-font-size-xxl);
+    }
+
+    .carousel .slides {
+        height: 452px;
+    }
+
+    .carousel .slide {
+        height: 452px;
+    }
+
+    .carousel .slide .banner-text-container {
+        padding: 10px 10px 30px;
+    }
+
+    .carousel .slide .banner-text-container p {
+        max-width: 960px;
+        margin: 10px auto;
+    }
+
+    .carousel .nav .nav-prev {
+        top: 30%;
+    }
+
+    .carousel .nav .nav-next {
+        top: 30%;
+    }
+
+    .carousel-wrapper {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .carousel-container {
+        background-color: #202020;
+    }
+}
